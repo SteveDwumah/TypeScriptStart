@@ -17,7 +17,7 @@ if (johnScore > meikeScore)
 else if (meikeScore > johnScore)
     console.log(`Meike gewinnt das Spiel mit: ` + meikeScore + ` Punkten!`)
 else if (johnScore === meikeScore)
-    console.log(Draw!);
+    console.log("Draw!");
 
 //!----- Aufgabe 2 --------!
 
