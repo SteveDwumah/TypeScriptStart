@@ -1,0 +1,18 @@
+.basketball{
+    display: flex;
+    gap: 10px;
+}
+.scoreboard{
+    border: 10px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(53, 51, 51);
+}
+ button{
+    width: 30px;
+    height: 20px;
+    border: 2px solid black;
+ }
+ p{
+    color: yellow;
+ }
