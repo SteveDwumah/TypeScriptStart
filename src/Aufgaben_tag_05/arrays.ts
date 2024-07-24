@@ -58,23 +58,23 @@ console.log(favoritePeople);
 //!----- Aufgabe 5 --------!
 
 console.log(bucketList);
-const bucketVariable: string = bucketList.pop()!
+const bucketVariable: string = bucketList.pop()??""
 console.log("Entfernt: ", bucketVariable);
 console.log(bucketList);
 
 console.log(luckyNumbers);
-const luckyVariable: number = luckyNumbers.pop()!
+const luckyVariable: number = luckyNumbers.pop()??0
 console.log("Entfernt: ", luckyVariable);
 console.log(luckyNumbers);
 
 console.log(favoritePeople);
-const favoriteVariable: string = favoritePeople.pop()!
+const favoriteVariable: string = favoritePeople.pop()??""
 console.log("Entfernt: ", favoriteVariable);
 console.log(favoritePeople);
 
 //!----- Aufgabe 6 --------!
 
-const shiftPeople: string = favoritePeople.shift()!
+const shiftPeople: string = favoritePeople.shift()??""
 console.log(favoritePeople);
 console.log({shiftPeople});
 
@@ -93,7 +93,7 @@ console.log(bucketList, bucketList.length);
 const lieblingsreiseziele: string [] = ["Bali", "Barcelona", "München", "Moskau", "New York", "Hamburg"]
 console.log(lieblingsreiseziele);
 
-const reisezieleVariable: string = lieblingsreiseziele.slice(2, 4)
+const reisezieleVariable: string [] = lieblingsreiseziele.slice(2, 4)
 console.log(reisezieleVariable);
 console.log(lieblingsreiseziele);
 
@@ -116,11 +116,50 @@ console.log(pushPopVariable);
 
 const futuramaQuote = "It's okay, Bender. I like cooking too. Oh, you're a dollar naughtier than most. My fellow Earthicans, as I have explained in my book 'Earth in the Balance', and the much more popular 'Harry Potter and the Balance of Earth', we need to defend our planet against pollution. Also dark wizards."
 
-const einText: string = futuramaQuote.split(".")
+const einText: string[] = futuramaQuote.split(".")
 console.log(einText);
 
-const einWort: string = futuramaQuote.split(" ")
+const einWort: string[] = futuramaQuote.split(" ")
 console.log(einWort);
 
-const einZeichen: string = futuramaQuote.split("")
+const einZeichen: string[] = futuramaQuote.split("")
 console.log(einZeichen);
+
+//!----- Aufgabe Bonus --------!
+
+const toDoItems: string [] = []
+
+function addItem(toDoElement: string, atTheBack: boolean) {
+    if (atTheBack) {
+        toDoItems.push(toDoElement);
+    }
+    else {
+        toDoItems.unshift(toDoElement);
+    }
+}
+
+function removeItem(atTheBack: boolean) {
+    if (atTheBack) {
+        toDoItems.pop()
+    }
+    else if (atTheBack===false) {
+        toDoItems.shift
+    }
+}
+
+function addItemAt(toDoItem: string, index: number) {
+
+    toDoItems.splice(index, 0, toDoItem);
+}
+
+function removeItemAt(index: number) {
+    toDoItems.splice(index, 1);
+}
+
+function printList() {
+    console.log(toDoItems);
+}
+addItem("Wäsche waschen", false);
+printList();
+addItem("Fitness", true)
+addItem()
