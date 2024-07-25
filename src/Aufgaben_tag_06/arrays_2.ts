@@ -31,17 +31,23 @@ console.log(sortArray2);
 //!----- Sort Aufgabe 2 --------!
 
 const oldPainters: string[] = ["Caspar David Friedrich", "Mary Cassatt", "Rosa Bonheur", "Francisco de Goya", "Édouard Manet"]
-
 const newerPainters: string[] = ["Pablo Picasso", "Salvador Dalí", "Frida Kahlo", "Georgia O'Keeffe",]
 
+//?----- spread Variante --------!
 const femalePainters: string[] = [...oldPainters.slice(1,3), ...newerPainters.slice(2,4)]
-
 const malePainters: string[] = [...oldPainters.slice(0,1), ...oldPainters.slice(4,6), ...newerPainters.slice(0,2)]
 
 console.log(femalePainters);
 console.log(malePainters);
-
-
+//?----- concat Variante --------!
+const oldFemalePainters: string[] = oldPainters.slice(1,3)
+const newFemalePainters: string[] = newerPainters.slice(2)
+const femalePainters2: string[] = oldFemalePainters.concat(newFemalePainters)
+console.log(femalePainters2);
+//?----- concat/spread Variante --------!
+const femalePainters3 = [...oldPainters.slice(1, 3)].concat(...newerPainters.slice(2, 4)
+  );
+  console.log({ femalePainters3 });
 
 //!----- Find Aufgabe 1 --------!
 
@@ -70,4 +76,22 @@ const artworks: string[] = [    "Die Sternennacht - Vincent van Gogh",
 function art (artworkName: string) {
     const artwork:string | undefined = artworks.find((name) => name.startsWith(artworkName))
     const artDates: string | undefined = artworkDates.find((name) => name.startsWith(artworkName))
+    console.log(artwork);
+    console.log(artDates);
+    if (artwork && artDates){
+        const titleAndPainter: string[] = artwork.split("-")
+        const dateAndPainter: string[] = artDates.split("-")
+        console.log(titleAndPainter);
+        const painter: string = titleAndPainter[1].trim()
+        const title: string = titleAndPainter[0].trim()
+        const date: string = dateAndPainter[1].trim()
+
+        console.log(title + " wurde von " + painter + " im Jahre " + date + " gemalt.");
+    
+
+    }
+    else{
+        console.log(`${artworkName} nicht gefunden`);
+    }
 }
+art("Die Mona")
