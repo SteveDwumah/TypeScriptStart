@@ -50,11 +50,17 @@ console.log(getNumberOfVowels("A, E, I, O, U und raus bist DU"));
 //!----- Loops Aufgabe 4 --------!
 
 function addToFifty(): void {
-    let randomNumber: number = Math.ceil(Math.random() * 10);
-    console.log(randomNumber);
+    let summe: number = 0;
+    while (summe <= 50) {
+        // Generiert eine Zufallszahl zwischen 1 und 10
+        const zufallszahl: number = Math.floor(Math.random() * 10) + 1;
 
-    for (let i: number = 1; i <= 50; i++ ){
+        // Addiert die Zufallszahl zur Summe
+        summe += zufallszahl;
 
-        }
-        
+        // Gibt die Zufallszahl und die aktuelle Summe auf der Konsole aus
+        console.log(`Zufallszahl: ${zufallszahl}, Aktuelle Summe: ${summe}`);
+    }
+    console.log("Die Summe hat 50 überschritten.");
 }
+addToFifty()
