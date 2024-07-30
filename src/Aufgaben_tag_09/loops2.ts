@@ -61,6 +61,6 @@ function addToFifty(): void {
         // Gibt die Zufallszahl und die aktuelle Summe auf der Konsole aus
         console.log(`Zufallszahl: ${zufallszahl}, Aktuelle Summe: ${summe}`);
     }
-    console.log("Die Summe hat 50 überschritten.");
+    console.log(`${summe} > 50. Stopping right here.`);
 }
 addToFifty()
