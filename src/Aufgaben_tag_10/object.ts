@@ -139,7 +139,7 @@ type Musik = {
   console.log(meineTopVier[0].kunstler);
   console.log(meineTopVier[0].formate[3]);
   console.log(meineTopVier[1].gold);
-  console.log(meineTopVier[2].release_jahr, " und ", meineTopVier[3].release_jahr);
+  console.log(meineTopVier[2].release_jahr.toString(), " und ", meineTopVier[3].release_jahr.toString());
   console.log(meineTopVier[3].formate[2]);
   console.log(meineTopVier[3].title.slice(17,21));
 
@@ -181,3 +181,18 @@ const singers: Singer[] = [
     { name: 'Pink Floyd', country: 'United Kingdom', period_active: { start: 1965, end: 1996, extra: 2014 }, genre: "Progressive rock / Psychedelic rock" },
 ];
 
+//*   ⬇️ Bands alphabetisch nach Namen sortieren ⬇️
+singers.sort((a, b) => a.name.localeCompare(b.name))
+console.log(singers);
+
+// singers.forEach ((year) => {
+//     console.log(year.period_active);
+// })
+//*   ⬇️ Bands aufsteigend nach dem Karrierebeginn sortieren ⬇️
+singers.sort((yearA, yearB) => {
+    return yearB.period_active.start - yearA.period_active.start
+})
+console.log(singers);
+
+
+   
