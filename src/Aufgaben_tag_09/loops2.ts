@@ -64,3 +64,102 @@ function addToFifty(): void {
     console.log(`${summe} > 50. Stopping right here.`);
 }
 addToFifty()
+
+
+
+//!----- Loops Aufgabe 5 --------!
+
+//- 1. FN deklarieren + Parameter (number[])
+//- 2. Durschnitt berechnen:
+//-                            a. summe aller punkte => loop
+//-                            b. berechnung => summe durch die anzahl der zahlen
+//- 3. Bewertung ausgeben => if/else 
+
+const results: number = [44, 11, 70, 80, 52, 88, 94, 3, 25, 46]
+
+function calAverage(myResults: number[]) : string{
+    //? Summe aller Punkte
+    let sum: number = 0;
+    for (let i: number = 0; i < myResults.length; i++) {
+        sum += myResults[i]
+    }
+    console.log({sum});
+
+    //? Durchschnitt berechnen
+    const average: number = sum / results.length
+    console.log({average});
+
+    //? Bewerung ausgeben
+    let level: string
+
+    if(average < 50) {
+        level = "ungenügend"
+    }
+    else if (average < 60) {
+        level = "mangelhaft"
+    }
+    else if (average < 70) {
+        level = "ausreichend"
+    }
+    else if (average < 80) {
+        level = "befriedigent"
+    }
+    else if (average < 90) {
+        level = "gut"
+    } else{
+        level = "sehr gut"
+    }
+    return level
+}
+const resultOfExam = calAverage(results)
+console.log(resultOfExam);
+
+//!----- Loops Bonus Aufgabe --------!
+
+const allGermanLetters = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z'
+  ];
+
+  function encodeInROT13 (inputSentence: string) : string {
+    const outputArray: string[];
+    const uppercaseSentence = inputSentence.toLocaleUpperCase();
+
+    for (const letter of uppercaseSentence) {
+        const indexOfLetter = allGermanLetters.indexOf(letter)
+        if(indexOfLetter === -1) {
+            outputArray.push(letter)
+        } else {
+            const newIndex = (indexOfLetter + 13) % 26
+            const newLetter = allGermanLetters[newIndex]
+            outputArray.push(newLetter)
+        }
+    }
+    return outputArray.join("")
+  }
+  const encodedSentence = encodeInROT13 ("Hello World")
+  console.log(encodedSentence);
