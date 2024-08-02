@@ -17,7 +17,7 @@ for (const [character, actor] of starWarsActors) {
 
 //!----- Tuple Aufgabe 2 --------!
 
-//? -------------    Siehe employee.ts  --------------------?//
+//? -------------  Siehe employee.ts  --------------------?//
 
 //!----- Enum Aufgabe 1 --------!
 
