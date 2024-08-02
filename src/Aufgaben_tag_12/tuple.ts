@@ -109,15 +109,18 @@ const allColors: {farbe: string, hex: string}[] = [
     {farbe: "Lila", hex: ClothingColor.Lila},
     {farbe: "Grau", hex: ClothingColor.Grau}
 ]
-
+    // ⬇️⬇️ Das HTML-Element mit der ID "button-container" suchen ⬇️⬇️
 const buttonContainer = document.getElementById("button-container");
 
 if (buttonContainer) {
     allColors.forEach(color => {
+    //   ⬇️⬇️ Ein neuen Button erstellen ⬇️⬇️
         const button = document.createElement("button");
+    //   ⬇️⬇️ Die Hintergrundfarbe des Buttons auf die entsprechende Farbe setzen ⬇️⬇️
         button.style.backgroundColor = color.hex;
+    //   ⬇️⬇️ Den Text des Buttons auf den Namen der Farbe setzen ⬇️⬇️
         button.textContent = color.farbe;
-
+    //   ⬇️⬇️ Den Button zum Container hinzufügen ⬇️⬇️
         buttonContainer.appendChild(button);
     });
 }
