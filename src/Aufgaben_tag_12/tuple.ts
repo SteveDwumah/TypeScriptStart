@@ -127,3 +127,10 @@ if (buttonContainer) {
 
 //!----- Set Aufgabe 1 --------!
 
+const starWarsCharacters = new Set<string>(["Luke Skywalker", "Darth Vader", "Obi Wan Kenobi"])
+console.log(starWarsCharacters);
+starWarsCharacters.add("Leia Organa")
+console.log(starWarsCharacters);
+//! ⬇️⬇️ Wenn versucht wird ein Wert hinzuzufügen, der bereits vorhanden ist, wird dieser ignoriert. ⬇️⬇️
+starWarsCharacters.add("Leia Organa")
+console.log(starWarsCharacters);
