@@ -88,6 +88,10 @@ const pizzaSucuk: Pizza = {
     ingredients: [PizzaIngredients.Sucuk, PizzaIngredients.Cheese, PizzaIngredients.Onion, PizzaIngredients.Pepperoni]
 }
 
+pizzaSucuk.ingredients.forEach((singleIngredient) => {
+    console.log(`Eine Zutat ist ${PizzaIngredients[singleIngredient]}`);
+})
+
 console.log(pizzaSucuk);
 
 //!----- Enum Aufgabe 3 --------!

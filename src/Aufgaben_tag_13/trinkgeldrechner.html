@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinkgeldrechner</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Trinkgeldrechner</h1>
+        <label for="billAmount">Wie hoch war die Rechnung? (EUR):</label>
+        <input type="number" id="billAmount" placeholder="z.B. 100" />
+
+        <label for="numberOfPeople">Wie viele Menschen teilen sich die Rechnung?</label>
+        <input type="number" id="numberOfPeople" placeholder="z.B. 4" />
+
+        <label for="serviceQuality">Wie war der Service?</label>
+        <select id="serviceQuality">
+            <option value="schlecht">Schlechter Service</option>
+            <option value="mittel">Mittlerer Service</option>
+            <option value="super">Super Service</option>
+        </select>
+
+        <button id="calculateBtn">Berechnen</button>
+
+        <div id="results" class="results"></div>
+    </div>
+
+
+    <script type="module" src="./trinkgeldrechner.ts"></script>
+</body>
+</html>
