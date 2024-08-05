@@ -32,7 +32,7 @@ const calculateTip = (billAmount: number, serviceQuality: ServiceQuality): numbe
             tipPercentage = 0
     }
 
-    //⬇️ Berechnet das Trinkgeldes ⬇️
+    //⬇️ Berechnet das Trinkgelde ⬇️
     return billAmount * tipPercentage;
 }
 
