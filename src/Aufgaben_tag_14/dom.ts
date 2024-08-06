@@ -90,7 +90,7 @@ if (galleryElement) {
 //⬇️ Funktion zum Hinzufügen von Eingabetext und aktuellem Datum ⬇️
 function addTextAndDate(): void {
     const inputField = document.getElementById('textInput') as HTMLInputElement;
-    const outputDiv = document.getElementById('output');
+    const outputDiv = document.getElementById('output') as HTMLElement
    
     if(inputField && outputDiv){
         const userInput: string = inputField.value
@@ -98,7 +98,6 @@ function addTextAndDate(): void {
         //⬇️ Eingabetext mit Datum im Output-Div anzeigen lassen ⬇️
         outputDiv.innerHTML = `<p>${userInput} - ${now}</p>`;
         inputField.value = '';
-    
     }
 }
 
