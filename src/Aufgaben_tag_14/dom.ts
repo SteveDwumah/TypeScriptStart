@@ -50,7 +50,7 @@ if (containerElement) {
     containerElement.appendChild(p);
 
     const input = document.createElement("input");
-    //⬇️ Dem Element input den Typ "text" zuweisen ⬇️
+    //⬇️ Dem Element input das Attribut "text" zuweisen ⬇️
     input.setAttribute("type", "text");
     //⬇️ Das Element input dem div "container" hinzufügen ⬇️
     containerElement.appendChild(input);
@@ -67,7 +67,7 @@ if (galleryElement) {
         //⬇️ Das Element figure erstellen ⬇️
         const figure = document.createElement("figure");
 
-        //⬇️ Das img Element erstellen und Typen zuweisen ⬇️
+        //⬇️ Das img Element erstellen und Attribute zuweisen ⬇️
         const img = document.createElement("img");
         img.setAttribute("src", `https://picsum.photos/id/237/200/300`);
         img.setAttribute("alt", `Bild ${i}`);
