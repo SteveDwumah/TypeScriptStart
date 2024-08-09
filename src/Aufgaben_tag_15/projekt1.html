@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fussball Sammelkarten</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Erstelle deine Fussball Sammelkarten</h1>
+    <form id="footballCardForm">
+        <input type="text" id="playerName" placeholder="Spielername" required>
+        <input type="number" id="age" placeholder="Alter" required>
+        <input type="text" id="team" placeholder="Team" required>
+        <input type="text" id="position" placeholder="Position" required>
+        <input type="number" id="goalsScored" placeholder="Tore" required>
+        <input type="number" id="matchesPlayed" placeholder="Spiele" required>
+        <input type="url" id="imageUrl" placeholder="Bild URL" required>
+        <button type="submit">Karte erstellen</button>
+    </form>
+    <div id="cardContainer"></div>
+
+    <script type="module" src="./projekt1.ts"></script>
+</body>
+</html>

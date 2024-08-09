@@ -43,3 +43,22 @@ function addTodo() {
     todoList.appendChild(li);
     todoInput.value = "";
 }
+
+
+
+
+
+
+
+
+
+
+type BookSchema = {
+    title: string,
+    author: string,
+    genre: string,
+    year: number,
+    pages: number,
+    id: number
+
+}
