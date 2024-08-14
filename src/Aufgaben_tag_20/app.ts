@@ -3,6 +3,7 @@
 import IceCreamFlavor from "./OOP_1";
 
 const popularIceCream = new IceCreamFlavor
+console.log(popularIceCream);
 
 console.clear()
 
