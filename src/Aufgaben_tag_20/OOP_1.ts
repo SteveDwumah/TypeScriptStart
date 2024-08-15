@@ -8,7 +8,22 @@ class IceCreamFlavor {
         this._price = price;
         this._isPopular = isPopular
     }
+
+    getTotalPrice(numberOfScoops: number): void {
+        const totalPrice = this._price * numberOfScoops;
+        console.log(`Total price for ${numberOfScoops} scoops of ${this._name}: ${totalPrice.toFixed()} Euro`);
+    }
+
+    printInfo(): void {
+        console.log(`Flavor ${this._name} is popular and costs ${this._price.toFixed()} Euro.`);
+    }
+
+    getLengthOfName(): number {
+        return this._name ? this._name.length : 0;
+    }
 }
+
+
 
 const vanilla = new IceCreamFlavor("Vanilla", 1.50, true);
 const chocolate = new IceCreamFlavor("Chocolate", 1.75, true);
@@ -19,7 +34,9 @@ const iceCreamFlavors = [vanilla, chocolate, strawberry, cookies]
 
 iceCreamFlavors.forEach(flavor => {
     if(flavor._isPopular) {
-        console.log(flavor._name);
+        console.log(`${flavor._name} is Popular` );
+    } else {
+        console.log(`${flavor._name} is not Popular`);
     }
 });
 

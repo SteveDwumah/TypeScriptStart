@@ -30,18 +30,25 @@ console.clear()
 
 import { Car } from "./OOP_4";
 import { Driver } from "./OOP_4";
+import CarType from "../Aufgaben_tag_21/Aufgabe_2/carType";
 
 
-const car1 = new Car("BMW", 2020, 250);
+const car1 = new Car("BMW", 2020, 250,);
 const car2 = new Car("Audi", 2018, 230);
 const car3 = new Car("Mercedes", 2022, 310);
 
-const driver1 = new Driver("Speedy", "Gonzales", 30, car1);
-const driver2 = new Driver("Cleo", "Egal", 25, car2);
-const driver3 = new Driver("Steve", "Dwumah", 29, car3);
+const driver1 = new Driver("Speedy", "Gonzales", 30, car1, 2000);
+const driver2 = new Driver("Cleo", "Egal", 25, car2, 2015);
+const driver3 = new Driver("Steve", "Dwumah", 29, car3,2010);
 
 console.log(driver1);
 console.log(driver2);
 console.log(driver3);
+
+
+
+const vanilla = new IceCreamFlavor('Vanilla', 2.10, true,);
+
+vanilla.getTotalPrice(2)
 
 
