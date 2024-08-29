@@ -3,6 +3,7 @@ function showTextAfterSeconds() {
         console.log("Du hast 5 Sekunden verstreichen lassen :) ");
     }, 5000);
 }
+showTextAfterSeconds()
 
 function displayIntervalMessage(): void {
     let counter = 11;
@@ -14,9 +15,10 @@ function displayIntervalMessage(): void {
             console.log(`Erledigt. Du hast 3 Sekunden verschwendet`);
             counter--;
         }
-        else if (counter = 0) {
-            clearInterval(intervalId);
+        else if (counter === 0) {
             console.log("Endich Feierabend!");
+            clearInterval(intervalId);
+            
         }
     }, 1000);
 }
