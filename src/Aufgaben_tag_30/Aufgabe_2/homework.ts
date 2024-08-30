@@ -47,24 +47,35 @@ function exerciseThree():Promise<string> {
 
 //! V2
 
-exerciseOne().then((message) => {
-    paragraph.textContent = `  ${message}  `;
-    console.log(message)
-  }) .catch((error)=>{
-    console.error(error);
-  });
+// exerciseOne().then((message) => {
+//     paragraph.textContent = `  ${message}  `;
+//     console.log(message)
+//   }) .catch((error)=>{
+//     console.error(error);
+//   });
   
-  exerciseTwo().then((message) => {
-    paragraph.textContent += `  ${message}  `;
-    console.log(message)
-  });
+//   exerciseTwo().then((message) => {
+//     paragraph.textContent += `  ${message}  `;
+//     console.log(message)
+//   });
   
-  exerciseThree().then((message) => {
-    paragraph.textContent += `  ${message}  `;
-    console.log(message)
-  });
+//   exerciseThree().then((message) => {
+//     paragraph.textContent += `  ${message}  `;
+//     console.log(message)
+//   });
 
 
   const paragraph = document.getElementById("homeworkStatus") as HTMLParagraphElement;
 
   paragraph.textContent = "Starting..."
+
+Promise.all([exerciseOne(), exerciseTwo(), exerciseThree()])
+     .then((resp: [string, string, string]) => {
+             resp.forEach((result: string) => {
+                 console.log(result);
+                 paragraph.textContent += result
+             })
+         }).catch((error) => console.error(error))
+         .finally (() =>{
+            paragraph.textContent += " Homework done "
+         })

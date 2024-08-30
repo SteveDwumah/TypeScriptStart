@@ -13,3 +13,11 @@ const randomNumbers = (): Promise <number[]> => {
         }
     })
 }
+
+randomNumbers().then((resp) => {
+    console.log("Numbers:", resp);
+    return resp.map(number => number + 7);
+})
+.then((resp) => {
+    console.log("Numbers after adding 7");
+})
