@@ -1,0 +1,14 @@
+Aufgabe 1:
+- Der Abruf hat 93.96 ms gedauert.
+- 10 Planeten.
+- Das Klima ist "frozen"
+- "Corellia"
+
+Aufgabe 2:
+- "Luke Skywalker"
+- "X-wing" & "Imperial shuttle"
+- "auburn, white" & "blue-gray"
+- "Boba Fett"
+- "The Empire Strikes Back", "Return of the Jedi", "Attack of the Clones"
+- "150"
+- "Alderaan"
