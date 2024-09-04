@@ -1,4 +1,4 @@
-export interface ICharacters {
+çexport interface ICharacters {
     info:    IInfo;
     results: IResult[];
 }

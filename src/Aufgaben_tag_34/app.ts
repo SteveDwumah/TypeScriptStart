@@ -38,10 +38,16 @@ function displayCharacters(results: IResult[]){
     if(characterOutput){
         characterOutput.innerHTML = ("")
         results.forEach((result: IResult) => {
-        characterOutput.appendChild(createParagraph("Name: ", result.name ))
-        characterOutput.appendChild(createParagraph("Gender: ", result.gender ))
-        characterOutput.appendChild(createParagraph("Species: ", result.species ))
+        characterOutput.appendChild(createParagraph("Name: ", result.name ));
+        characterOutput.appendChild(createParagraph("Gender: ", result.gender ));
+        characterOutput.appendChild(createParagraph("Species: ", result.species ));
+        characterOutput.appendChild(createParagraph("Location: ", result.location.name ));
+        characterOutput.appendChild(createParagraph("Origin: ", result.origin.name ))
         characterOutput.style.borderStyle = "solid"
+        characterOutput.appendChild(createImage(result.image))
+        // const image = document.createElement("img") as HTMLImageElement;
+        // image.src = result.image;
+        // characterOutput.appendChild(image);
         
         })
     }
@@ -52,8 +58,8 @@ function createParagraph(label: string, value: string): HTMLParagraphElement {
     paragraph.textContent = `${label} ${value}`
     return paragraph
 }
-// function createImage(label: string, value: string): HTMLImageElement {
-//     const image = document.createElement("img") as HTMLImageElement;
-//     image.textContent = `${label} ${value}`
-//     return image
-// }
+function createImage(linkImg: string): HTMLImageElement {
+    const image = document.createElement("img") as HTMLImageElement;
+    image.src = linkImg
+    return image
+}
